@@ -10,23 +10,23 @@ import {
 class SocialProfileClass extends Component {
   constructor(props) {
     super(props);
-    // console.log("SocialProfileClass child constructor");
+   
   }
 
   async componentDidMount() {
-    // console.log("SocialProfileClass child componentDidMount");
+   
   }
 
   componentDidUpdate() {
-    // console.log("SocialProfileClass child componentDidUpdate");
+    
   }
 
   componentWillUnmount() {
-    // console.log("SocialProfileClass child componentWillUnmount");
+    
   }
 
   render() {
-    // console.log("SocialProfileClass child render");
+    
     return (
       <div className="social-media-container">
         <a

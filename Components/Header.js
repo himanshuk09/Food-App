@@ -1,12 +1,12 @@
 import FoodFireLogo from "../Images/Food Fire Logo.png";
-import { Link } from "react-router-dom"; // imported Link for client side routing
+import { Link } from "react-router-dom"; 
 import { useNavigate } from "react-router-dom";
 import useOnline from "../Hooks/useOnline";
 import useAuth from "../Hooks/useAuth";
 import useLocalStorage from "../Hooks/useLocalStorage";
 import { useEffect } from "react";
 
-// Title component for display logo
+
 const Title = () => (
   <Link to="/">
     <img
@@ -18,31 +18,31 @@ const Title = () => (
   </Link>
 );
 
-// Header component for header section: Logo, Nav Items
+
 const Header = () => {
   const navigate = useNavigate();
 
-  // call custom hook useLocalStorage for getting localStorage value of user
+  
   const [getLocalStorage, , clearLocalStorage] = useLocalStorage("user");
 
-  // call custom hook useAuth for user is loggedin or not
+
   const [isLoggedin, setIsLoggedin] = useAuth();
 
   useEffect(() => {
-    // if value of getLocalStorage is equal to null setIsLoggedin to false
+    
     if (getLocalStorage === null) {
       setIsLoggedin(false);
     }
   }, [getLocalStorage])
 
-  // call custom hook useOnline if user is online or not
+
   const isOnline = useOnline();
 
   return (
     <div className="header">
       <Title />
 
-      {/* if user is logged in then display userName */}
+
       {isLoggedin && <div className="user-name">Hi {getLocalStorage?.userName}!</div>}
 
       <div className="nav-items">

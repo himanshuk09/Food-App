@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="about-container-main">
       <div className="about-profile-container">
-        {/* used ternary condition to Show my profile and Hide my Profile and using nested routing */}
+       
         {show ? (
           <>
             <Link to={"/about"}>
