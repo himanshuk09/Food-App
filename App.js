@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
@@ -11,7 +10,8 @@ import Login from "./Components/Login";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import Profile from "./Components/ProfileClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // for routing our page import createBrowserRouter and RouterProvider for providing router & Outlet for children component for nested routing
-
+import 'dotenv/config'
+require('dotenv').config();
 
 const AppLayout = () => {
   return (

@@ -1,7 +1,7 @@
 {
   "name": "namaste-react",
   "version": "1.0.0",
-  "description": "This is a live Course",
+  "description": "Food App",
   "scripts": {
     "start": "parcel public/index.html",
     "build": "parcel build public/index.html",
@@ -11,22 +11,31 @@
     "type": "git",
     "url": "git+https://github.com/chetannada/Namaste-React.git"
   },
-  "author": "Chetan Nada",
+  "author": "Himanshu Khade",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chetannada/Namaste-React/issues"
   },
   "homepage": "https://github.com/chetannada/Namaste-React#readme",
   "devDependencies": {
+    "buffer": "^5.7.1",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.8.2",
-    "process": "^0.11.10"
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-redux": "^9.1.0",
     "react-router-dom": "^6.7.0",
     "yup": "^0.32.11"
   },

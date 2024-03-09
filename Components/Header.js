@@ -1,40 +1,34 @@
 import FoodFireLogo from "../Images/Food Fire Logo.png";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import useOnline from "../Hooks/useOnline";
 import useAuth from "../Hooks/useAuth";
 import useLocalStorage from "../Hooks/useLocalStorage";
 import { useEffect } from "react";
 
-
 const Title = () => (
   <Link to="/">
     <img
       className="logo"
-      src={FoodFireLogo}
+      src={require("../Images/foodAppLogo.png")}
       alt="Food Fire"
       title="Food Fire"
     />
   </Link>
 );
 
-
 const Header = () => {
   const navigate = useNavigate();
 
-  
   const [getLocalStorage, , clearLocalStorage] = useLocalStorage("user");
-
 
   const [isLoggedin, setIsLoggedin] = useAuth();
 
   useEffect(() => {
-    
     if (getLocalStorage === null) {
       setIsLoggedin(false);
     }
-  }, [getLocalStorage])
-
+  }, [getLocalStorage]);
 
   const isOnline = useOnline();
 
@@ -42,8 +36,9 @@ const Header = () => {
     <div className="header">
       <Title />
 
-
-      {isLoggedin && <div className="user-name">Hi {getLocalStorage?.userName}!</div>}
+      {isLoggedin && (
+        <div className="user-name">Hi {getLocalStorage?.userName}!</div>
+      )}
 
       <div className="nav-items">
         <ul>
@@ -66,21 +61,33 @@ const Header = () => {
               <button
                 className="logout-btn"
                 onClick={() => {
-                  clearLocalStorage()
+                  clearLocalStorage();
                   setIsLoggedin(false);
                 }}
               >
-                Logout<span className={isOnline ? "login-btn-green" : "login-btn-red"}> ●</span>
+                Logout
+                <span
+                  className={isOnline ? "login-btn-green" : "login-btn-red"}
+                >
+                  {" "}
+                  ●
+                </span>
               </button>
             ) : (
               <button className="login-btn" onClick={() => navigate("/login")}>
-                Login<span className={isOnline ? "login-btn-green" : "login-btn-red"}> ●</span>
+                Login
+                <span
+                  className={isOnline ? "login-btn-green" : "login-btn-red"}
+                >
+                  {" "}
+                  ●
+                </span>
               </button>
             )}
           </li>
         </ul>
       </div>
-    </div >
+    </div>
   );
 };
 

@@ -62,7 +62,8 @@ a {
 
 .logo {
   padding: 10px 0 10px 15px;
-  width: 90px;
+  /* width: 90px; */
+  width: 162px;
 }
 
 .user-name {
@@ -334,6 +335,11 @@ a {
 
 .menu-title-wrap {
   padding: 20px;
+  background-color: #e8e5e2;
+  border: 0.5px solid #cbc4c4;
+  border-radius: 19px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .menu-title-wrap .menu-title {
@@ -808,7 +814,7 @@ a {
   color: var(--dark-orange);
 }
 
-.profile-repo .profile-repo-items h3 a{
+.profile-repo .profile-repo-items h3 a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1089,7 +1095,7 @@ a {
     width: 330px;
   }
 
-  .profile-repo .profile-repo-items h3 a{
+  .profile-repo .profile-repo-items h3 a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -1255,8 +1261,8 @@ a {
   .contact-container .contact-left img {
     width: 200px;
   }
-  
-  .profile-repo .profile-repo-items h3 a{
+
+  .profile-repo .profile-repo-items h3 a {
     margin: 0px 5px;
   }
 }
@@ -1341,7 +1347,7 @@ a {
     margin: 20px 15px 0px;
   }
 
-  .profile-repo .profile-repo-items h3 a{
+  .profile-repo .profile-repo-items h3 a {
     font-size: small;
   }
 }

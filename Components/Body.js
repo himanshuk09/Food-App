@@ -11,6 +11,7 @@ import UserOffline from "./UserOffline";
 
 const Body = () => {
   
+  // console.log(process.env.SWIGGY_API_URL);
   const [searchText, setSearchText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [allRestaurants, FilterRes] = useResData(swiggy_api_URL);
